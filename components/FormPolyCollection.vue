@@ -1,5 +1,5 @@
 <template>
-    <div class="form-list" :ref="(el) => form.setElement(el)">
+    <div class="form-list" :ref="(el) => form.setElement(el as HTMLElement)">
         <slot name="list">
             <ul>
                 <draggable
@@ -19,6 +19,7 @@
                             :form="element"
                             :deletable="form.allowDelete"
                             :sortable="form.sortable"
+                            :block-name="form.blockName"
                             @delete="event => { form.deleteItem(event) }"
                             @up="event => { form.moveItemUp(event) }"
                             @down="event => { form.moveItemDown(event) }"

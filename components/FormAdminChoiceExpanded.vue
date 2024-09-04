@@ -12,11 +12,10 @@
 </template>
 
 <script setup lang="ts">
-import {ChoiceForm} from "@enhavo/vue-form/model/ChoiceForm";
+import {Form} from "@enhavo/vue-form/model/Form";
 
 const props = defineProps<{
-    form: ChoiceForm
+    form: Form
 }>()
 
 </script>
-

@@ -33,6 +33,6 @@ const props = defineProps<{
     form: Form,
     sortable: boolean,
     deletable: boolean,
-    blockName: string,
+    blockName?: string,
 }>()
 </script>

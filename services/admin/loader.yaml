@@ -54,7 +54,7 @@ services:
         chunk: 'form'
         arguments:
             - '@enhavo/app/frame/FrameManager'
-            - '@enhavo/core/Translator'
+            - '@enhavo/app/translation/Translator'
             - '@enhavo/app/frame/FrameEventDispatcher'
         tags:
             - 'enhavo_app.form'

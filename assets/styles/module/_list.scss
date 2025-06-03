@@ -1,0 +1,35 @@
+@use "@enhavo/app/assets/styles/import/variables";
+
+.form-list {
+  .form-list-button-row {margin:6px 0 12px 0;
+    .form-list-button {cursor: pointer;z-index:1;top:0;text-align:center;width:33px;background: variables.$grey1;border-radius:3px;color: variables.$grey3;padding:4px 0;
+      &:hover {color:#fff;background: variables.$color1;}
+    }
+  }
+  .form-list-items {display:flex;flex-direction:column;gap:10px;margin-top:2px;
+    &.bordered {
+      .form-list-item {padding:10px;border:1px solid variables.$grey5;
+        .buttons-container {top:-1px;}
+      }
+    }
+    &.deletable {padding-right:28px;
+      &.sortable {padding-right:56px;}
+    }
+    &.sortable {padding-right:56px;
+      &:not(.deletable) {padding-right:84px;}
+    }
+  }
+
+  .form-list-item {position: relative;padding:8px 7px 7px 7px;border:1px solid variables.$grey5;
+    .buttons-container {position:absolute;left:calc(100% + 3px);top:0;width:54px;display:flex;gap:2px;flex-wrap:wrap;
+      .button {width:26px;line-height:26px;background:#fff;text-align:center;padding:0;margin:0;cursor:pointer;border-radius:3px;color: variables.$grey3;
+        &.delete-button {background:rgba(variables.$color6b,0.1);
+          &:hover {background: variables.$color6b;}
+        }
+        &:hover {background: variables.$color1;
+          i { color:#fff;}
+        }
+      }
+    }
+  }
+}

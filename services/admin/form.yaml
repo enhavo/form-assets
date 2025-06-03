@@ -1,0 +1,16 @@
+services:
+    '@enhavo/form/form/visitor/AdminFormVisitor':
+        chunk: 'vue'
+        import: AdminFormVisitor
+        tags:
+            - { name: form.model }
+            - { name: enhavo_app.admin.form_visitor }
+
+    '@enhavo/form/form/model/AutoCompleteForm':
+        chunk: 'vue'
+        import: AutoCompleteForm
+        arguments:
+            - '@enhavo/app/routing/Router'
+            - '@enhavo/app/frame/FrameManager'
+        tags:
+            - { name: form.model }
